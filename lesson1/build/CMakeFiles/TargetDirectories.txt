@@ -1,2 +1,0 @@
-/Users/nikolos/Documents/MY_PROJECT/skillbox/lesson1/build/CMakeFiles/edit_cache.dir
-/Users/nikolos/Documents/MY_PROJECT/skillbox/lesson1/build/CMakeFiles/rebuild_cache.dir
