@@ -13,176 +13,118 @@ int main() {
 //    secondProgram();
 //    threethProgram();
 //    fourthProgram();
-//    fifthProgram();
+   fifthProgram();
 //    sixthProgram();
-   seventhProgram();
+//    seventhProgram();
 
 }
 
-void seventhProgram(){
-    // Напишите программу, которая выводит меню бизнес-ланча ресторана в зависимости от дня недели. 
-    // В меню есть общая часть, а есть уникальная, которая зависит от дня недели. 
-    // Пользователь должен ввести номер дня недели — от 1 (понедельник) до 7 (воскресенье), 
-    // а программа должна вывести на экран день недели и меню этого дня.
-    int fitstNumber;
-    std::cout << "Введите день недели (от 1 до 7): ";
-    std::cin >> fitstNumber;
+void fistProgram() {
 
-    if(fitstNumber  == 4){
-
-         std::cout << "Меню сегодня (четверг):\n";
-         std::cout << "Гороховый суп \n";
-         std::cout << "Салат «Цезарь» с креветками\n";
-         std::cout << "Куриная ножка с пюре \n";
-         std::cout << "Морс \n";
-
+    int x,y;
+    std::cout << "input x y:"; std::cin >> x >> y;
+    if(x > 0)
+    {
+        if(y > 0)
+        {
+            std::cout << "1" << std::endl;
+        }
+        else if(y < 0)
+        {
+            std::cout << "4" << std::endl;
+        }
+        else
+        {
+            std::cout <<"On the border" << std::endl;
+        }
     }
-    else if (fitstNumber == 0 || fitstNumber > 7){
-        std::cout << "Вы ввели не верное число \n";
+    else if(x < 0)
+    {
+        if(y > 0)
+        {
+            std::cout << "2" << std::endl;
+        }
+        else if(y < 0)
+        {
+            std::cout << "3" << std::endl;
+        }
+        else
+        {
+            std::cout << "On the border" << std::endl;
+        }
     }
-
-}
-
-void sixthProgram(){
-    int mansCount;
-    int barbersCount;
-
-    std::cout << "************** Барбершоп-калькультор **************\n";
-    std::cout << "Введите число мужчин в городе: ";
-    std::cin >> mansCount;
-
-    std::cout << "Сколько уже барберов удалось нанять?";
-    std::cin >> barbersCount;
-
-     // Cколько человек может постричь один барбер за одну смену?
-    int mansPerBarber = 8; // один человек в час, смена 8 часов
-    // Cколько человек нужно постричь за день?
-    int mansPerBarberMonth = mansPerBarber * 30;
-    std::cout << "Один барбер стрижет столько клиентов в месяц " << mansPerBarberMonth << "\n";
-    // Cколько нужно барберов, чтобы постричь mansPerDay человек?
-    int requiredBarbersCount = mansCount / mansPerBarberMonth;
-    if (requiredBarbersCount % mansPerBarberMonth != 0){
-        requiredBarbersCount += 1;
-    }
-    std::cout << "Необходимое число барберов: " << requiredBarbersCount << "\n";
-
-     // Cколько человек успеет постричь requiredBarbersCount за месяц?
-    std::cout << requiredBarbersCount << " барбера могут постричь " << 
-    requiredBarbersCount * mansPerBarberMonth << " мужчин за месяцё\n";
-
-
-    // —равниваем с количеством имеющихс€ барберов
-    if (requiredBarbersCount > barbersCount){
-        std::cout << "Нужно больше барберов!!!\n";
-    }
-    else if (requiredBarbersCount == barbersCount) {
-         std::cout << "Барберов ровно столько сколько нужно!!!\n";
-    }
-    else {
-         std::cout << "Барберов хватает!!!\n";
-    }
-}
-void fifthProgram(){
-    // Напишите программу, которая проверяет, делится ли одно число на другое без остатка.
-    int fitstNumber;
-    int secondNumber;
-    std::cout << "Введите первое число: ";
-    std::cin >> fitstNumber;
-    std::cout << "Введите второе число: ";
-    std::cin >> secondNumber;
-    std::cout << "-----Проверяем----- \n";
-    if(fitstNumber % secondNumber == 0){
-         std::cout << "Да " <<fitstNumber << " делится на " << secondNumber << " без остатка\n";
-
-    }
-    else {
-         std::cout << "Нет " <<fitstNumber << " не делится на " << secondNumber << " без остатка\n";
+    else
+    {
+        std::cout << "On the border" << std::endl;
     }
 }
 
-void fourthProgram(){
-//  Напишите программу, которая определяет уровень персонажа в компьютерной игре. 
-//  Пользователь вводит число «очков опыта», а программа вычисляет уровень. 
-//  Новый уровень даётся при достижении 1000, 2500 и 5000 «очков опыта». Начальный уровень равен 1.
-
-    int numberExpirience;
-    int level = 0;
-    std::cout << "Введите число очков опыта: ";
-    std::cin >> numberExpirience;
-    std::cout << "-----Считаем----- \n";
-
-    if(numberExpirience >= 1000 & numberExpirience < 2500){
-        std::cout << "Ваш уровень:"<< level <<"\n";
-
+void secondProgram(){
+    int getMoney;
+    std::cout << "Введите сумму для снятия\n";
+    std::cin >> getMoney;
+    int limit = 100000;
+    if(getMoney > limit){
+        std::cout << "Недостаточно средств\n";
     }
-    else if (numberExpirience >= 2500 & numberExpirience < 5000){
-        level += 2;
-        std::cout << "Первое число больше! " << level << "\n";
+    else if(getMoney <= limit){
+        if(getMoney % 100 == 0){
+            std::cout << "Вот ваши деньги\n";
+        }
+        else{
+            std::cout << "В банкомате купюры только по 100 рублей введите подходящую сумму\n";
+        }
     }
-    else if (numberExpirience >= 5000){
-        level += 3;
-        std::cout << "Второе число больше! " << level << "\n";
-    }
-    std::cout << "Ваш уровень:"<< level <<"\n";
 }
 
 
 void threethProgram(){
-//    Напишите программу, которая проверяет, чётное ли число ввел пользователь.
-//    Пример: int remainder = x % 2 (вычисляет остаток от деления `x` на 2).
-
-    int fitstNumber;
-    std::cout << "Введите число: ";
-     std::cin >> fitstNumber;
-    std::cout << "-----Проверяем----- \n";
-    if(fitstNumber % 2 == 0){
-         std::cout << "Число" <<  fitstNumber << " - четное\n";
-
+    int year;
+    std::cout << "input year:"; std::cin >> year;
+    if(year % 4 == 0)
+    {
+        std::cout << "Yes" << std::endl;
     }
-    else {
-         std::cout << "Число" <<  fitstNumber << " - не четное\n";
+    else if(year % 100 == 0)
+    {
+        if(year % 400 == 0)
+            std::cout << "Yes" << std::endl;
+        else
+            std::cout << "No" << std::endl;
     }
-}
-void secondProgram(){
-//    Напишите программу которая проверяет то, как вы умеете складывать два числа в уме. 
-//    Программа должна выводить два разных сообщения на верный и неверный ответ пользователя. 
-//    В последнем случае надо показывать правильный результат.
-
-    int fitstNumber;
-    int secondNumber;
-    int summNumbers;
-    std::cout << "Введите первое число: ";
-    std::cin >> fitstNumber;
-    std::cout << "Введите второе число: ";
-    std::cin >> secondNumber;
-    std::cout << "Введите их сумму: ";
-    std::cin >> summNumbers;
-    std::cout << "-----Проверяем----- \n";
-    if(fitstNumber + secondNumber == summNumbers){
-         std::cout << "Верно! \n";
-
-    }
-    else {
-        std::cout << "Ошибка! Верный результат " << summNumbers << "\n";
+    else
+    {
+         std::cout << "No" << std::endl;
     }
 }
 
-void fistProgram() {
-    // Напишите программу, которая ищет минимальное значение из двух чисел.
-    int fitstNumber;
-    int secondNumber;
-    std::cout << "Введите первое число: ";
-    std::cin >> fitstNumber;
-    std::cout << "Введите второе число: ";
-    std::cin >> secondNumber;
-    if(fitstNumber == secondNumber){
-         std::cout << "Числа равны! \n";
+void fourthProgram(){
+    int firstCar;
+    int secondCar;
+    int thirdCar;
+    int fourthCar;
+    std::cout << "input weight of four cars:"; std::cin >> firstCar;std::cin >> 
+    secondCar;std::cin >> thirdCar;std::cin >> fourthCar;
+    int availibleWeight = 1200;
 
-    }
-    else if (fitstNumber > secondNumber){
-         std::cout << "Первое число больше! " << fitstNumber << "\n";
-    }
-    else {
-        std::cout << "Второе число больше! " << secondNumber << "\n";
-    }
+    if(firstCar > availibleWeight) std::cout << " yes";
+    if(secondCar > availibleWeight) std::cout << " yes";
+    if(thirdCar > availibleWeight) std::cout << " yes";
+    if(fourthCar > availibleWeight) std::cout << " yes";
+
 }
+
+void fifthProgram(){
+    int a;
+    int b;
+    int c;
+    std::cout << "input A B C:"; std::cin >> a;std::cin >> 
+    b;std::cin >> c;
+
+    if(a + b < c & b + c < a c + a < b ){
+        std::cout << "no";
+    }
+    else{
+         std::cout << "yes";
+    }
+    }
