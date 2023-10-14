@@ -7,124 +7,149 @@ void fourthProgram();
 void fifthProgram();
 void sixthProgram();
 void seventhProgram();
+void eighthProgram();
+void ninethProgram();
 
 int main() {
 //    fistProgram();
 //    secondProgram();
 //    threethProgram();
 //    fourthProgram();
-   fifthProgram();
+//    fifthProgram();
 //    sixthProgram();
 //    seventhProgram();
+//    eighthProgram();
+   ninethProgram();
 
 }
 
 void fistProgram() {
+        std::string password;
+    
+        std::cout << "Введите паролль: \n" << std::endl;
+        std::cin >> password;
 
-    int x,y;
-    std::cout << "input x y:"; std::cin >> x >> y;
-    if(x > 0)
-    {
-        if(y > 0)
-        {
-            std::cout << "1" << std::endl;
+        while (password != "123"){
+            std::cout << "Ввидите пароль еще раз : \n";
+             std::cin >> password;
         }
-        else if(y < 0)
-        {
-            std::cout << "4" << std::endl;
-        }
-        else
-        {
-            std::cout <<"On the border" << std::endl;
-        }
+         std::cout << "Пароль верный";
     }
-    else if(x < 0)
-    {
-        if(y > 0)
-        {
-            std::cout << "2" << std::endl;
-        }
-        else if(y < 0)
-        {
-            std::cout << "3" << std::endl;
-        }
-        else
-        {
-            std::cout << "On the border" << std::endl;
-        }
-    }
-    else
-    {
-        std::cout << "On the border" << std::endl;
-    }
-}
 
 void secondProgram(){
-    int getMoney;
-    std::cout << "Введите сумму для снятия\n";
-    std::cin >> getMoney;
-    int limit = 100000;
-    if(getMoney > limit){
-        std::cout << "Недостаточно средств\n";
-    }
-    else if(getMoney <= limit){
-        if(getMoney % 100 == 0){
-            std::cout << "Вот ваши деньги\n";
-        }
-        else{
-            std::cout << "В банкомате купюры только по 100 рублей введите подходящую сумму\n";
-        }
+    int count = 0;
+    while(count <100){
+    std::cout << "Барашки " << count << " \n";
+    count +=1;
     }
 }
 
-
 void threethProgram(){
-    int year;
-    std::cout << "input year:"; std::cin >> year;
-    if(year % 4 == 0)
-    {
-        std::cout << "Yes" << std::endl;
+
+std::string password;
+    
+  do {  std::cout << "Введите паролль: \n" << std::endl;
+        std::cin >> password;
     }
-    else if(year % 100 == 0)
-    {
-        if(year % 400 == 0)
-            std::cout << "Yes" << std::endl;
-        else
-            std::cout << "No" << std::endl;
-    }
-    else
-    {
-         std::cout << "No" << std::endl;
-    }
+  while (password != "123");
+  std::cout << "Пароль верный";
 }
 
 void fourthProgram(){
-    int firstCar;
-    int secondCar;
-    int thirdCar;
-    int fourthCar;
-    std::cout << "input weight of four cars:"; std::cin >> firstCar;std::cin >> 
-    secondCar;std::cin >> thirdCar;std::cin >> fourthCar;
-    int availibleWeight = 1200;
 
-    if(firstCar > availibleWeight) std::cout << " yes";
-    if(secondCar > availibleWeight) std::cout << " yes";
-    if(thirdCar > availibleWeight) std::cout << " yes";
-    if(fourthCar > availibleWeight) std::cout << " yes";
+std::string answer;
+
+
+do {
+std::cout << "Ты выполнил задания которое я тебе давал? \n";
+std::cin >> answer;
+}while (answer != "ДА КОНЕЧНО");
+std::cout << "Молодец";
+
 
 }
 
 void fifthProgram(){
-    int a;
-    int b;
-    int c;
-    std::cout << "input A B C:"; std::cin >> a;std::cin >> 
-    b;std::cin >> c;
 
-    if(a + b < c & b + c < a c + a < b ){
-        std::cout << "no";
+std::cout << "Как вас зовут? \n";
+int count = 0;
+std::string answer;
+do {
+    std::cin >> answer;
+    if (count){
+        std::cout << "Все говорят " << answer << " а ты купи слона? \n";
+    }else{
+        std::cout << "Купи слона! "  << answer << "\n";
     }
-    else{
-         std::cout << "yes";
+    count += 1;
+}while (answer != "stop");
+std::cout << "Молодец";
+
+
+}
+
+void sixthProgram(){
+    int N;
+    std::cin >> N;
+
+    int K;
+    std::cin >> K;
+    int count = 0;
+    while (count > N){
+        std::cout << " K в степени " << count;
+        count +=1;
     }
+
+}
+
+void seventhProgram(){
+   std::cout << "Сколько раз вам напомнить? \n";
+   int count;
+   std::cin >> count;
+   int i = 0;
+   std::cout << "Введите что вам нужно напомнить ? \n";
+   std::string remember;
+   std::cin >> remember;
+
+
+   while (count > i){
+       std::cout << "Вам нужно сделать " << remember << " \n";
+       i += 1;
     }
+}
+
+
+void eighthProgram(){
+
+   int one;
+   int two;
+   int three;
+   int tour;
+
+   do {
+    std::cout << "Введите пинкод? \n";
+    std::cin >> one;std::cin >> two;std::cin >> three;std::cin >> tour;
+   }
+
+   while (one+two+three+tour != 42);
+
+}
+
+void ninethProgram(){
+   std::cout << "Сколько чисел хотите ввести? \n";
+   int number;
+   std::cin >> number;
+   int total = 0;
+   int amount;
+   int count = 0;
+   do {
+    std::cout << "Вводите следующее число \n";
+    std::cin >> amount;
+    total += amount;
+    count += 1;
+   }
+
+   while (count < number);
+    std::cout << "Сумма "<<  total << " \n";
+}
+
